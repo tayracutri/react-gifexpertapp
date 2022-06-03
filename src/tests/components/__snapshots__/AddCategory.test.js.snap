@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test on addcategory should show the component 1`] = `ShallowWrapper {}`;

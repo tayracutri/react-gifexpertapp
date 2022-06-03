@@ -1,9 +1,6 @@
 import { useState, useEffect } from 'react'
 import { getGifs } from '../helpers/GetGifs';
 
-
-
-
 export const useFecthGifs = (category) => {
 
     const [state, setState] = useState({
@@ -14,17 +11,13 @@ export const useFecthGifs = (category) => {
     useEffect(() => {
         getGifs(category)
             .then(imgs => {
-                setTimeout(() => {
-                    setState({
-                        data: imgs,
-                        loading: false
-                    })
-                }, 100);
+
+                setState({
+                    data: imgs,
+                    loading: false
+                })
             })
     }, [category])
-
-
-
 
     return state;
 };
